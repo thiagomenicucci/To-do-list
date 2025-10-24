@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+}
+h1 { text-align: center; }
+form { display: flex; margin-bottom: 20px; }
+#input-descricao { 
+    flex: 1; 
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Bordas arredondadas à esquerda */
+}
+form button { 
+    padding: 10px 15px; 
+    background: #337ab7; 
+    color: white; 
+    border: none;
+    border-radius: 0 4px 4px 0; /* Bordas arredondadas à direita */
+    cursor: pointer;
+}
+form button:hover {
+    background: #286090;
+}
+
+ul { list-style: none; padding: 0; }
+
+/* ================================================== */
+/* ESTILOS DA LISTA ATUALIZADOS */
+/* ================================================== */
+li {
+    padding: 10px; 
+    border-bottom: 1px solid #eee; /* Linha separadora mais sutil */
+    display: flex; 
+    align-items: center; /* Alinha verticalmente */
+}
+
+/* Aplica o risco SÓ NO TEXTO, não no checkbox */
+li.concluida span { 
+    text-decoration: line-through; 
+    color: #888; 
+}
+
+li .checkbox-tarefa {
+    margin-right: 12px; /* Espaço entre o checkbox e o texto */
+    cursor: pointer;
+    /* Faz o checkbox ficar um pouco maior */
+    transform: scale(1.2); 
+}
+
+li span { 
+    flex: 1; /* Faz o texto ocupar todo o espaço do meio */
+    word-break: break-word; /* Quebra palavras longas */
+}
+
+li button { 
+    background: #d9534f; 
+    color: white; 
+    border: none; 
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 10px; /* Espaço entre o texto e o botão X */
+    cursor: pointer;
+}
+li button:hover {
+    background: #c9302c;
+}
+/* ================================================== */
+/* FIM DOS ESTILOS ATUALIZADOS */
+/* ================================================== */
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+    form { flex-direction: column; }
+    #input-descricao { border-radius: 4px; }
+    form button { 
+        width: 100%; 
+        margin-top: 5px;
+        border-radius: 4px;
+    }
+}
